@@ -8,7 +8,8 @@ def ap_orf(text):
         if word in unique_words:
             continue
         else:
-            unique_words.append(word)
+            if len(word) > 3:
+                unique_words.append(word)
     unique_words.sort()
     result = []
     for i in unique_words:
